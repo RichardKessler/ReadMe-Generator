@@ -2,9 +2,9 @@ const fs = require('fs');
 const util = require('util');
 const axios = require('axios');
 const inquirer = require('inquirer');
-const markdownData = require('./utils/generateMarkdown.js');
+const markdownData = require('./utils/generateMarkdown');
 
-async function getUserAnswers() {
+function getUserAnswers() {
     return inquirer.prompt([{
             name: 'title',
             message: 'What is the title of your project?'
@@ -32,16 +32,33 @@ async function getUserAnswers() {
         {
             name: 'testing',
             message: 'What tests did you perform on your project?'
-        }
+        },
+        {
+            name: 'github',
+            message: "What is your GitHub username?"
+        },
     ]);
 }
 
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    console.log(fileName, data);
+    fs.writeFile(fileName, data, "utf8", function(err) {
+        if (err) {
+            throw err;
+            console.log("ERROR!!!")
+        }
+    });
+}
 
-function init() {
+async function init() {
+    console.log('INIT FUNCTION!!!!');
 
+    const answers = await getUserAnswers();
+    console.log(answers);
+
+    markdownData(answers);
+
+    writeToFile("test.md", markdownData(answers));
 }
 
 init();
-getUserAnswers();
-console.log(getUserAnswers);
