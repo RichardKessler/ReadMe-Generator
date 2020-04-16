@@ -4,6 +4,7 @@ const axios = require('axios');
 const inquirer = require('inquirer');
 const markdownData = require('./utils/generateMarkdown');
 
+//A Function that prompts the user for inputs that will be entered into the README file
 function getUserAnswers() {
     return inquirer.prompt([{
             name: 'title',
@@ -40,6 +41,7 @@ function getUserAnswers() {
     ]);
 }
 
+//Function to make the README file
 function writeToFile(fileName, data) {
     console.log(fileName, data);
     fs.writeFile(fileName, data, "utf8", function(err) {
@@ -50,6 +52,7 @@ function writeToFile(fileName, data) {
     });
 }
 
+//Async function that waits for the user inputed answers and writes those answers to the README file
 async function init() {
     console.log('INIT FUNCTION!!!!');
 
@@ -61,4 +64,5 @@ async function init() {
     writeToFile("test.md", markdownData(answers));
 }
 
+// Calls the init function to start the process
 init();
