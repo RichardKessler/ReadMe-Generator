@@ -23,6 +23,7 @@ function getUserAnswers() {
             message: 'How do you use your project?'
         },
         {
+            type: 'list',
             name: 'license',
             message: 'What license does your project use?',
             choices: ['MIT', 'GNU GPLv3', 'GNU AGPLv3', 'GNU LGPLv3', 'Apache 2.0', 'MPL 2.0', 'BSL 1.0', 'No License']
