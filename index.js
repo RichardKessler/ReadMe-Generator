@@ -24,7 +24,8 @@ function getUserAnswers() {
         },
         {
             name: 'license',
-            message: 'What license does your project use?'
+            message: 'What license does your project use?',
+            choices: ['MIT', 'GNU GPLv3', 'GNU AGPLv3', 'GNU LGPLv3', 'Apache 2.0', 'MPL 2.0', 'BSL 1.0', 'No License']
         },
         {
             name: 'contributers',
@@ -44,7 +45,7 @@ function getUserAnswers() {
 //Function to make the README file
 function writeToFile(fileName, data) {
     console.log(fileName, data);
-    fs.writeFile(fileName, data, "utf8", function(err) {
+    fs.writeFile(fileName, data, "utf8", (err) => {
         if (err) {
             throw err;
             console.log("ERROR!!!")
