@@ -14,6 +14,18 @@ SO THAT I can focus on the coding and have a great README
 
 ## Getting Started
 
+To start you need to install the application.  After it is installed you need to fun the Node.js command to run the application.
+
+## Installation
+
+
+
+## Running
+
+To run the application use:
+```
+node index.js
+```
 
 
 ## Application Details
