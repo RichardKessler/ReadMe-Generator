@@ -49,7 +49,6 @@ function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, "utf8", (err) => {
         if (err) {
             throw err;
-            console.log("ERROR!!!")
         }
     });
 }
