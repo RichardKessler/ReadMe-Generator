@@ -12,13 +12,20 @@ function generateMarkdown(data) {
 
 [![GitHub license](${licenseBadge})](${projectURL})
 
+# Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Licnese](#license)
+* [Contributers](#contributers)
+* [Testing](#testing)
+
+
 # Description
  ${data.description}
 
 # Installation
  ${data.installation}
-
- # Table of Contents 
 
 # Usage
  ${data.usage}
