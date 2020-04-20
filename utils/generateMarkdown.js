@@ -46,6 +46,14 @@ function generateMarkdown(data) {
 
  # GitHub
  ![Image description](${userAvatar})
+
+ # Credits
+
+ * [Shileds.io](https://shields.io/)
+
+ # Author
+
+ * ${data.name}
 `;
 }
 

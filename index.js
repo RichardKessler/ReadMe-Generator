@@ -7,6 +7,10 @@ const markdownData = require('./utils/generateMarkdown');
 //A Function that prompts the user for inputs that will be entered into the README file
 function getUserAnswers() {
     return inquirer.prompt([{
+            name: 'name',
+            message: 'What is your full name?'
+        },
+        {
             name: 'title',
             message: 'What is the title of your project?'
         },
