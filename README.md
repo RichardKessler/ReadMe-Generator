@@ -31,3 +31,19 @@ node index.js
 ## Application Details
 
 This application creates a README.md file for a user through command line prompts.  A series of questions are prompted and the user inputs the data that will be entered into the generated file.  The file will include a table of contents, title, installation, usage, license, contributers, tests, credits (ie. shields.io for the badges), and the author.  
+
+## Built With
+
+* Javascript
+* Node.js
+* GitHub
+
+## Credits
+
+* [Shields.io](https://shields.io/)
+* Eddie Saunders
+* Travis Cultreri
+
+## Author
+
+* Richard Kessler
