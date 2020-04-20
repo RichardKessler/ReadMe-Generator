@@ -6,11 +6,16 @@ function generateMarkdown(data) {
     const projectURL = `https://github.com/${data.github}/${kebalCaseTitle}`;
     const licenseBadge = `https://img.shields.io/github/license/${data.github}/${kebalCaseTitle}`;
     const repoSize = `https://img.shields.io/github/repo-size/${data.github}/${kebalCaseTitle}?color=Green&style=plastic`;
+    const mainLang = `https://img.shields.io/github/languages/top/${data.github}/${kebalCaseTitle}?color=blueviolet&style=plastic`;
+    const languageTypes = `https://img.shields.io/github/languages/count/${data.github}/${kebalCaseTitle}?color=red&style=plastic`;
 
     return `
 # ${data.title}
 
 [![GitHub license](${licenseBadge})](${projectURL})
+[![GitHub Repo](${repoSize})](${projectURL})
+[![Main Repo Language](${mainLang})](${projectURL})
+[![Repo Languages](${languageTypes})](${projectURL})
 
 # Table of Contents
 * [Description](#description)
