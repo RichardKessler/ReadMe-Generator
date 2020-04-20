@@ -34,7 +34,7 @@ function getUserAnswers() {
         },
         {
             name: 'contributers',
-            message: 'Can others contribute to your project and if so how?'
+            message: 'Who contibuted to this project?'
         },
         {
             name: 'testing',
@@ -66,7 +66,7 @@ async function init() {
 
     markdownData(answers);
 
-    writeToFile("test.md", markdownData(answers));
+    writeToFile("README.md", markdownData(answers));
 }
 
 // Calls the init function to start the process
